@@ -9,38 +9,43 @@
       crossorigin="anonymous"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Final-Weather App</title>
     <link rel="stylesheet" href="src/style.css" />
   </head>
+
   <body>
     <div class="container">
       <div class="weather-app">
         <div class="overview">
           <h1>San Francisco</h1>
+
           <ul>
             <li>Friday 05:00</li>
             <li>Clear</li>
           </ul>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="clearfix">
-              <img
-                src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
-                alt="clear"
-                class="float-left"
-              />
-              <div class="float-left">9 °C | °F</div>
-            </div>
-          </div>
 
-          <div class="col-6">
-            <ul>
-              <li>Precipitation: 0%</li>
-              <li>Humidity: 73%</li>
-              <li>Wind: 2 km/h</li>
-            </ul>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="clearfix weather-temperature">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
+                  alt="clear"
+                  class="float-left"
+                />
+                <div class="float-left">
+                  <strong>9</strong
+                  ><span class="units">°C | <a href="#">°F</a></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <ul>
+                <li>Precipitation: 0%</li>
+                <li>Humidity: 73%</li>
+                <li>Wind: 2 km/h</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
