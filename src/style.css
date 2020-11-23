@@ -47,3 +47,10 @@ li {
   font-size: 16px;
   top: -34px;
 }
+.active {
+  color: rgba(135, 135, 135);
+  cursor: default;
+}
+.active:hover {
+  text-decoration: none;
+}
