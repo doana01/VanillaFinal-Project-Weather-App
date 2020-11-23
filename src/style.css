@@ -27,9 +27,7 @@ li {
   font-weight: 100;
   line-height: 19px;
 }
-li:first-letter {
-  text-transform: capitalize;
-}
+
 .overview {
   margin-bottom: 20px;
 }
