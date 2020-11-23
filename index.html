@@ -48,25 +48,32 @@
 
             <div class="row">
               <div class="col-md-6">
-                <div class="clearfix  weather-temperature">
+                <div class="clearfix weather-temperature">
                   <img src="" alt="clear" id="icon" class="float-left" />
                   <div class="float-left">
                     <strong id="temperature"></strong
-                    ><span class="units"><a href="#" id="celsius-link" class="active"> °C</a> |  <a href="#" id="fahrenheit-link" > °F </a></span>
+                    ><span class="units"
+                      ><a href="#" id="celsius-link" class="active"> °C</a> |
+                      <a href="#" id="fahrenheit-link"> °F </a></span
+                    >
                   </div>
                 </div>
+              </div>
+              <div class="col-6">
+                <ul>
+        
+                  <li>Humidity:<span id="humidity"></span> %</li>
+                  <li>Wind: <span id="wind"></span> km/h</li>
+                </ul>
+              </div>
             </div>
-            <div class="col-6">
-              <ul>
-                <li>Precipitation: 0%</li>
-                <li>Humidity:<span id="humidity"></span> %</li>
-                <li>Wind: <span id="wind"></span> km/h</li>
-              </ul>
-            </div>
-          </div>
+
+          <div class="row weather-forecast" id="forecast"></div> 
+             
         </div>
       </div>
     </div>
     <script src="src/app.js"></script>
   </body>
 </html>
+
