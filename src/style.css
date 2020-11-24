@@ -22,7 +22,7 @@ background-image: linear-gradient(-225deg, #77FFD2 0%, #6297DB 48%, #1EECFF 100%
   border: -5px solid #dadde1;
   border-radius: 20px;
   max-width: 600px;
-  padding: 45px;
+  padding: 40px;
     box-shadow: inset 0px 0px 60px rgba(13, 27, 29, 0.7);
  
 }
@@ -48,7 +48,7 @@ li {
   color: rgb(246, 250, 255);
   font-size: 15px;
   text-transform : capitalize ;
-  padding-top: 20px;
+  padding-top: 10px;
   padding-bottom: 5px;
   font-weight: 100px;
   height: 18px;
