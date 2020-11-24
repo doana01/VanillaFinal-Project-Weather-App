@@ -15,37 +15,42 @@
   </head>
 
   <body>
-    <div class="container">
+
+<div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
           <form id="search-form" class="mb-3">
             <div class="row">
-              <div class="col-9">
+              <div class="col-8">
                 <input
                   type="search"
-                  placeholder="Type a city name.."
+                  placeholder="Type a City name.."
                   class="form-control"
                   id="city-input"
                   autocomplete="off"
                 />
-              </div>
-              <div class="col-3">
+            </div>
+              <div class="col-2" >
                 <input
                   type="submit"
                   value="Search"
-                  class="btn btn-primary w-100"
+                      class="form-control btn btn-primary shadow-sm"
                 />
-              </div>
+                </div>
+                </div>
+                  <div class="col-2" >
+            <button
+                class="btn btn-success  btn-icon"
+                id="current-location-button"
+              >Current</button>
             </div>
           </form>
           <div class="overview">
-            <h1 id="city"></h1>
-
-            <ul>
+            <strong><h1 id="city"></h1></strong>
+           <ul>
               <li id="date"></li>
               <li id="description"></li>
             </ul>
-
             <div class="row">
               <div class="col-md-6">
                 <div class="clearfix weather-temperature">
@@ -61,18 +66,21 @@
               </div>
               <div class="col-6">
                 <ul>
-        
-                  <li>Humidity:<span id="humidity"></span> %</li>
-                  <li>Wind: <span id="wind"></span> km/h</li>
+                  <li>Humidity : <span id="humidity"></span>  %</li>
+                  <li>Wind :  <span id="wind"></span>  km/h</li>
+                    <li>Atm: <span id= "pressure"></span> hPa</li>
                 </ul>
+                 <img src="img/orange-snow.svg "  alt="kids" width="200px"  class="orange-kids"/>
               </div>
             </div>
-
-          <div class="row weather-forecast" id="forecast"></div> 
-             
-        </div>
+             <span class= "windy-link"><a href="https://www.windy.com/37.778/-122.442?37.281,-122.442,8" id="windy-link" target= "blank"> Windy </a>  
+             </span> 🌡️💨
+<div class="row weather-forecast" id="forecast"></div> 
+             </div>
       </div>
     </div>
+    <footer><a href="https://github.com/doana0/VanillaFinal-Project-Weather-App" id="link">Open-source</a> coded by 💜  <a href="https://www.linkedin.com/in/mimoolah/" id= "link">Doana Ruhlmann</a>
+   </footer>  
     <script src="src/app.js"></script>
   </body>
 </html>
