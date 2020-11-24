@@ -6,7 +6,7 @@ background-image: linear-gradient(to left, #BDBBBE 0%, #9D9EA3 100%), radial-gra
   background-size: 100%
 }
 .container{
-  padding-top: 40px;
+  padding-top: 30px;
 }
 .weather-app {
   display: block;
