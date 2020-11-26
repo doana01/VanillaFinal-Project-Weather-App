@@ -1,5 +1,5 @@
 function formatDate(timestamp) {
-   let date = new Date(timestamp);
+    let date = new Date(timestamp);
     let hours = date.getHours();
     if (hours < 10) {
         hours = `0${hours}`;
@@ -8,10 +8,10 @@ function formatDate(timestamp) {
     if (minutes < 10) {
         minutes = `0${minutes}`;
     }
-let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-  let day = days[date.getDay()];
-    return `${day} ${hours}:${minutes}`;
-return `${day} ${formatHours(timestamp)}`;
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    let day = days[date.getDay()];
+  return `${day} ${hours}:${minutes}`;
+    return `${day} ${formatHours(timestamp)}`;
 }
 
 function formatHours(timestamp) {
@@ -24,16 +24,19 @@ function formatHours(timestamp) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-return `${hours}:${minutes}`;
+
+  return `${hours}:${minutes}`;
 }
 function displayTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
+
 function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = null;
   let forecast = null;
-for (let index = 0; index < 6; index++) {
+
+  for (let index = 0; index < 6; index++) {
     forecast = response.data.list[index];
     forecastElement.innerHTML += `
     <div class="col-2">
@@ -85,22 +88,16 @@ let apiKey = "a443edec30a183c88b00d1c6adfc3dcd";
   apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
-
 function searchLocation(position) {
-
   let apiKey = "a443edec30a183c88b00d1c6adfc3dcd";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
-  
-  axios.get(apiUrl).then(displayTemperature); apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
-    console.log(response);
 }
-
 function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
-
 function displayFahrenheitTemperature(event) {
     event.preventDefault();
     let temperatureElement = document.querySelector("#temperature");
@@ -136,3 +133,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("San Francisco");
+
